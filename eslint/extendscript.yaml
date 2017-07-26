@@ -1,0 +1,24 @@
+# Settings for scripts running in Adobe ExtendScript
+extends:
+  - "./base.yaml"
+parserOptions:
+  ecmaVersion: 3
+rules:
+  block-scoped-var: error
+  dot-notation:
+    - error
+    - allowKeywords: true
+  func-names:
+    - off
+  new-cap:
+    - warn
+    - newIsCap: true
+      capIsNew: true
+      capIsNewExceptions:
+        - File
+        - Folder
+      properties: true
+  no-iterator: off
+  no-proto: off
+  no-void: off
+  radix: error

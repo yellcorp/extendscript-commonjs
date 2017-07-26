@@ -1,0 +1,6 @@
+{
+  "json": "json",
+  "anObject": {
+    "anArray": [ 0, 1, 2 ]
+  }
+}
