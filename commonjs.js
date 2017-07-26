@@ -59,6 +59,7 @@ logging.setLogFunction(logging.writeln);
 
 
 var EITHER_SLASH = /[\x2F\x5C]/g;
+var WINDOWS_DRIVE_LETTER = /^[A-Za-z]:/;
 var pathutil = {
   init: function (platform) {
     function genericNormalize(root, parts, separator) {
@@ -104,25 +105,14 @@ var pathutil = {
           root = "\\";
           parts.shift();
         }
-      } else if (part0.length >= 2) {
-        var ch1 = part0.charCodeAt(1);
-        if (ch1 === 0x3A) { // ':'
-          var ch0 = part0.charCodeAt(0);
-          if (
-            (0x41 <= ch0 && ch0 <= 0x5a) || // 'A'-'Z'
-            (0x61 <= ch0 && ch0 <= 0x7a)    // 'a'-'z'
-          ) {
-            // there's a drive letter and colon
-            if (part0.length === 2) {
-              // ... with a slash following
-              root = parts.shift() + "\\";
-            } else {
-              // ... without a slash following. path is relative
-              // to drive's current dir
-              root = part0.substr(0, 2);
-              parts[0] = parts[0].slice(2);
-            }
-          }
+      } else if (WINDOWS_DRIVE_LETTER.test(part0)) {
+        if (part0.length === 2) {
+          // a slash follows - it's the drive root
+          root = parts.shift() + "\\";
+        } else {
+          // no slash - path is relative to drive's current dir
+          root = part0.substr(0, 2);
+          parts[0] = parts[0].slice(2);
         }
       }
       return genericNormalize(root.toUpperCase(), parts, "\\");
