@@ -3,6 +3,8 @@ extends:
   - "./base.yaml"
 parserOptions:
   ecmaVersion: 3
+env:
+  commonjs: true
 rules:
   block-scoped-var: error
   dot-notation:
