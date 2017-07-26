@@ -1,6 +1,6 @@
 {
   "name": "@yellcorp/extendscript-commonjs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CommonJS modules for Adobe® ExtendScript, following node.js conventions",
   "keywords": [
     "adobe",
