@@ -1,5 +1,5 @@
 (function () {
 #include "../commonjs.js"
-require($.fileName);
+require.init($.fileName);
 #include "./run.js"
 }());
