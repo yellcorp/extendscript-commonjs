@@ -25,6 +25,6 @@
     "eslint": "^4.3.0"
   },
   "scripts": {
-    "lint": "eslint -- commonjs.js"
+    "lint": "eslint -- commonjs.js test/**/*.js"
   }
 }
