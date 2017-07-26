@@ -1,6 +1,6 @@
 {
   "name": "@yellcorp/extendscript-commonjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CommonJS modules for Adobe® ExtendScript, following node.js conventions",
   "keywords": [
     "adobe",
@@ -13,7 +13,9 @@
   ],
   "license": "MIT",
   "author": "Jim Boswell <jimb@yellcorp.org> (http://yellcorp.org)",
-  "files": [ "./commonjs.js" ],
+  "files": [
+    "./commonjs.js"
+  ],
   "main": "./commonjs.js",
   "dependencies": {
     "es5-shim": "4.5.9",
