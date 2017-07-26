@@ -16,7 +16,7 @@ wrapper if that's your thing.
 For example, if you got this module through `npm`, and your main script was in
 the same directory as your `node_modules`, it might look like this:
 ```
-#include "./node_modules/extendscript-commonjs/common.js"
+#include "./node_modules/@yellcorp/extendscript-commonjs/common.js"
 ```
 
 ### 2. Call `require.init($.fileName)` from your main script.
@@ -29,8 +29,8 @@ this on the line following the `#include` from the previous step. Always pass
 require.init($.fileName);
 ```
 
-Failure to do this will cause a call to `require()` to throw an Error.
-Doing this twice or more will immediately throw an Error.
+Failure to call `require.init` will cause a call to `require()` to throw an
+Error.  Doing this twice or more will immediately throw an Error.
 
 ### 3. Use it
 
