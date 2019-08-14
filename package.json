@@ -13,6 +13,10 @@
   ],
   "license": "MIT",
   "author": "Jim Boswell <jimb@yellcorp.org> (http://yellcorp.org)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yellcorp/extendscript-commonjs.git"
+  },
   "files": [
     "commonjs.js",
     "LICENSE",
