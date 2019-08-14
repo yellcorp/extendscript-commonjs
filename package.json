@@ -29,7 +29,7 @@
     "json3": "3.3.2"
   },
   "devDependencies": {
-    "eslint": "^4.3.0"
+    "eslint": "^4.18.2"
   },
   "scripts": {
     "lint": "eslint -- commonjs.js test/**/*.js"
