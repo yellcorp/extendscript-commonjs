@@ -14,9 +14,12 @@
   "license": "MIT",
   "author": "Jim Boswell <jimb@yellcorp.org> (http://yellcorp.org)",
   "files": [
-    "./commonjs.js"
+    "commonjs.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
   ],
-  "main": "./commonjs.js",
+  "main": "commonjs.js",
   "dependencies": {
     "es5-shim": "4.5.9",
     "json3": "3.3.2"
